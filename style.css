@@ -1,0 +1,580 @@
+    /* Styles globaux */
+    h1 {
+        font-size: 2.5em;
+        color: #082e5c;
+        margin-bottom: 20px;
+        padding-top: 1%;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+    }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Empêche les débordements horizontaux */
+    }
+
+    * {
+        box-sizing: border-box; /* Assure que les marges et paddings sont inclus dans la largeur/hauteur */
+    }
+
+
+    header{
+        margin: 0px;
+        padding-bottom: 20px;
+    }
+    /* Global Footer Styles */
+    .footer {
+        background-color: #082e5c; /* Bleu marine */
+        color: #ffffff;
+        padding: 40px 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+
+
+    /* Footer Top Section */
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    .footer-brand,
+    .footer-links,
+    .footer-contact {
+        flex: 1;
+        min-width: 200px;
+    }
+
+    .footer-links,
+    .footer-contact {
+        position: relative; /* Nécessaire pour utiliser left */
+        left: 100px; /* Décalage vers la droite */
+    }
+
+    /* Brand Section */
+    .footer-brand h3 {
+        font-size: 1.8em;
+        font-weight: 700;
+        color: #A5B4FC; /* Bleu clair */
+        margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+        font-size: 0.9em;
+        line-height: 1.6;
+        color: #cccccc;
+    }
+
+    /* Links Section */
+    .footer-links h4,
+    .footer-contact h4 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+        color: #A5B4FC;
+    }
+
+    .footer-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 0.9em;
+        transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: #A5B4FC;
+    }
+
+    /* Contact Section */
+    .footer-contact p {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+    }
+
+    .footer-contact a {
+        text-decoration: none;
+        color: #A5B4FC;
+        transition: color 0.3s ease;
+    }
+
+    .footer-contact a:hover {
+        color: #ffffff;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease;
+    }
+
+    .social-icons img:hover {
+        transform: scale(1.1);
+    }
+
+    /* Footer Bottom Section */
+    .footer-bottom {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #061a40; /* Couleur légèrement plus sombre */
+        font-size: 0.85em;
+        color: #cccccc;
+        position: relative; /* Assure un positionnement précis */
+        top:  20px; /* Remonte le bandeau */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .footer-top {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer-brand,
+        .footer-links,
+        .footer-contact {
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            justify-content: center;
+        }
+    }
+
+
+
+    h1,h2{
+        text-align: center;
+    }
+
+    #photo_portrait{
+        display: flex;
+        justify-content: center;
+        background  : url("img/portrait50.jpg");
+        height: 600px;
+        position: relative;
+    }
+
+    #txt_hero {
+        position: absolute;
+        color: #082e5c;
+        font-size: 1.20em;
+        font-weight: bold;
+        padding: 2%;
+        top: 60%;
+        left: 0%;
+        border-radius: 10px;
+    }
+    #hero_buttons{
+        position: absolute;
+        top : 80%;
+        left: 5%;
+        display: flex;
+        justify-content: center;
+        padding-top: 1%;
+    }
+    .hero_button a{
+        display: inline-block;
+        padding: 15px 20px;
+        margin-right: 25px;
+        background-color: #082e5c; 
+        color: #FFFFFF; 
+        text-decoration: none;
+        border: 2px solid #082e5c;
+        border-radius: 10px;
+        font-weight: bold;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+        
+    }
+    .hero_button a:hover {
+        transform: scale(1.05); /* Agrandit légèrement */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+        color :#082e5c;
+        background-color: #FFFFFF;
+        
+    }
+
+    #button_contact a {
+        background-color: transparent; /* Fond transparent */
+        border: 2px solid #082e5c; /* Bordure colorée */
+        color: #082e5c; /* Texte bleu foncé pour plus de contraste */
+    }
+
+    #button_contact a:hover{
+        transform: scale(1.05); /* Agrandit légèrement */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+        color :#082e5c;
+        background-color: #FFFFFF;
+    }
+
+    .hero li a{
+        text-decoration: none;
+        color: white; 
+        font-size: 1.1em;
+    }
+
+    #photo_accueil{
+        background-size: cover;
+    }
+    #services_accueil{
+        width: 90%;
+        margin:auto;
+        padding-top: 3%;
+    }
+    #services_accueil-container{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 40% 40%;
+        gap:5%;
+        padding-bottom: 8%;
+        
+        
+    }
+    #services_accueil-container > div {
+        border: 1px solid black;
+        padding: 1%; 
+        border-radius: 10px;
+        background-color: white;
+        transition: color 0.3s ease;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #services_accueil-container :hover{
+        background-color: #ab7c3e;
+        color: white;
+    }
+
+
+    #cv {
+        max-width: 800px; /* Limite la largeur maximale du conteneur */
+        margin: 0 auto; /* Centre le conteneur sur la page */
+        padding: 5.5%; /* Ajoute un peu de padding pour la mise en page */
+    }
+
+    .cv-image {
+        width: 100%; /* L'image prend toute la largeur disponible dans son conteneur */
+        max-width: 800px; /* Limite la largeur maximale de l'image */
+        display: block; /* Empêche l'image d'avoir un comportement en ligne */
+        margin: 0 auto; /* Centre l'image horizontalement */
+    }
+
+    .download-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #082e5c;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .download-btn:hover {
+        transform: scale(1.05); /* Agrandit légèrement */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+    }
+
+
+
+    /* Styles pour la Navbar */
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #082e5c; 
+        padding: 10px 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100%; 
+        z-index: 1000;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        padding-left: 35%;
+    }
+
+    .nav-links li a {
+        position: relative;  /* Nécessaire pour utiliser ::after */
+        text-decoration: none;
+        color: white; 
+        font-size: 1.1em;
+        transition: color 0.3s ease;  /* Transition pour la couleur du texte */
+    }
+
+    /* Pseudo-élément pour le soulignement élastique */
+    .nav-links li a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;  /* Commence avec une largeur de 0 (invisible) */
+        height: 2px;  /* Hauteur de la ligne */
+        background-color: #FFFFFF;  /* Couleur du soulignement */
+        transition: width 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Lors du survol du lien, on étend le soulignement et on ajoute un effet élastique */
+    .nav-links li a:hover::after {
+        width: 100%;  /* Étend la ligne sur toute la largeur du lien */
+        transform: scaleX(1.05);  /* Ajoute l'effet élastique horizontal */
+    }
+
+    .nav-links :active {
+        text-decoration: underline;
+    }
+
+
+
+
+
+    .contact-section {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    .contact-section h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contact-section p {
+        text-align: center;
+        font-size: 1.1em;
+        margin-bottom: 30px;
+        color: #666666;
+    }
+
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-form label {
+        font-size: 1.1em;
+        color: #333333;
+        margin-bottom: 5px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        font-size: 1em;
+    }
+
+    .contact-form input[type="text"]:focus,
+    .contact-form input[type="email"]:focus,
+    .contact-form textarea:focus {
+        border-color: #00ABE4;
+        outline: none;
+    }
+
+    .contact-form textarea {
+        resize: vertical;
+    }
+
+
+    .submit-button {
+        display: inline-block; /* Important pour les liens */
+        width: 100%;
+        padding: 10px 20px;
+        background-color: #082e5c;
+        color: #ffffff;
+        text-align: center; /* Centre le texte */
+        text-decoration: none; /* Supprime le soulignement des liens */
+        border-radius: 5px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .submit-button:hover {
+        transform: scale(1.01); /* Agrandit légèrement */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+    }
+
+
+
+    #about {
+        padding: 50px 20px;
+        background-color: #f9f9f9;
+        text-align: center;
+    }
+
+
+
+    .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .about-section {
+        background: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        flex: 1;
+        max-width: 350px;
+        min-width: 280px;
+        text-align: left;
+    }
+
+    .about-section h3 {
+        color: #082e5c;
+        margin-bottom: 15px;
+    }
+
+    .about-section p {
+        color: #333;
+        font-size: 1em;
+        line-height: 1.6em;
+    }
+
+    .about-section ul {
+        list-style: none;
+        padding: 0;
+        color: #555;
+    }
+
+    .about-section ul li {
+        margin-bottom: 10px;
+    }
+
+    .about-section ul li strong {
+        color: #082e5c;
+    }
+
+    .about-image {
+        width: 100%;
+        max-height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .photo-credit {
+        font-size: 7px; /* Texte en tout petit */
+        color: #ffffff; /* Gris clair */
+        opacity: 0.5; /* À peine visible */
+        
+    }
+
+    .about-section ul li ul {
+        margin-left: 20px;
+        list-style-type: circle;
+    }
+    .about-section ul li ul li {
+        margin: 5px 0;
+    }
+
+    /* Responsivité : Petits écrans (mobiles) */
+    @media (max-width: 768px) {
+        /* Navbar */
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 15px;
+        }
+
+        .nav-links {
+            padding-left: 0;
+            gap: 15px;
+            flex-direction: column; /* Empile les liens */
+        }
+
+        .nav-links li {
+            text-align: left;
+        }
+
+        /* Image du CV */
+        .cv-image {
+            max-width: 100%;
+            height: auto; /* Garde les proportions */
+        }
+
+        /* Section Contact */
+        .contact-section {
+            padding: 15px;
+        }
+
+        /* Footer */
+        .footer-container {
+            flex-direction: column; /* Empile les sections */
+            align-items: center;
+        }
+
+        .footer-section {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    /* Responsivité : Très petits écrans */
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.8em; /* Réduit la taille des titres */
+        }
+
+        .download-btn {
+            font-size: 0.9em;
+            padding: 8px 15px;
+        }
+
+        .cv-image {
+            width: 100%; /* Adapte complètement à l'écran */
+        }
+
+        .footer-bottom p {
+            font-size: 0.7em;
+        }
+    }

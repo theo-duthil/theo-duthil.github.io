@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Théo Duthil</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="img/icon.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="a-propos.html">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h1>Me contacter</h1>
+            <p>Si vous avez des questions ou souhaitez discuter d’un projet, n'hésitez pas à me contacter via ce formulaire ou par mail à theo.duthil@edu.esiee.fr.</p>
+            
+            <form id="contact-form" class="contact-form">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+            
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="subject">Sujet :</label>
+                <input type="text" id="subject" name="subject" required>
+            
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            
+                <button type="submit" class="submit-button">Envoyer</button>
+            </form>            
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <!-- Section "À propos" -->
+            <div class="footer-brand">
+                <h3>Duthil Theo</h3>
+                <p>
+                    Je suis à la recherche d'une alternance en Réseaux et Sécurité / Cybersécurité pour une période de 3 ans, la durée du cycle ingénieur.
+                </p>
+            </div>
+    
+            <!-- Section "Liens utiles" -->
+            <div class="footer-links">
+                <h4>Liens utiles</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cv.html">Mon CV</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                </ul>
+            </div>
+    
+            <!-- Réseaux sociaux -->
+            <div class="footer-contact">
+                <h4>Suivez-moi</h4>
+                <div class="social-icons">
+                    <a id="lien_linkedin" href="https://fr.linkedin.com/in/duthil-th%C3%A9o-14256b2a1">
+                        <img id="linkedin" src="img/logo_linkedin.png" alt="logo LinkedIn">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Bas de page -->
+        <div class="footer-bottom">
+            <p>© 2024 Duthil Theo. Tous droits réservés.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Initialisation EmailJS
+        emailjs.init("HYCA9sSsc1dkhCAUC");
+
+        // Fonction pour échapper les caractères spéciaux
+        function escapeHTML(str) {
+            return str.replace(/[&<>"'\/]/g, function (match) {
+                switch (match) {
+                    case '&': return '&amp;';
+                    case '<': return '&lt;';
+                    case '>': return '&gt;';
+                    case '"': return '&quot;';
+                    case "'": return '&#x27;';
+                    case '/': return '&#x2F;';
+                }
+            });
+        }
+
+        // Gestion de l'envoi du formulaire
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();  // Empêche le rechargement de la page
+
+            // Récupération des données du formulaire et échappement des caractères
+            var name = document.getElementById("name");
+            var email = document.getElementById("email");
+            var subject = document.getElementById("subject");
+            var message = document.getElementById("message");
+
+            name.value = escapeHTML(name.value);
+            email.value = escapeHTML(email.value);
+            subject.value = escapeHTML(subject.value);
+            message.value = escapeHTML(message.value);
+
+            // Envoi du formulaire via EmailJS
+            emailjs.sendForm('service_3odu53f', 'template_45qelxw', document.getElementById('contact-form'))
+            .then(function(response) {
+                console.log("Réponse d'EmailJS : ", response);
+                alert("Message envoyé avec succès ! Merci de m'avoir contacté.");
+            }, function(error) {
+                console.log("Erreur d'envoi : ", error);
+                console.error('Erreur lors de l\'envoi du message :', error);  // Affichage des erreurs dans la console
+                alert("Désolé, il y a eu un problème lors de l'envoi du message. Veuillez réessayer.");
+            });
+            
+        });
+    </script>
+</body>
+</html>
