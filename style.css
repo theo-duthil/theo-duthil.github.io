@@ -1,5 +1,5 @@
-    /* Styles globaux */
-    h1 {
+     /* Styles globaux */
+     h1 {
         font-size: 2.5em;
         color: #082e5c;
         margin-bottom: 20px;
@@ -516,15 +516,12 @@
     @media (max-width: 768px) {
         /* Navbar */
         .navbar {
-            flex-direction: column;
-            align-items: flex-start;
             padding: 15px;
         }
 
         .nav-links {
-            padding-left: 0;
-            gap: 15px;
-            flex-direction: column; /* Empile les liens */
+            gap: 10px;
+            justify-content: center;
         }
 
         .nav-links li {
@@ -537,10 +534,6 @@
             height: auto; /* Garde les proportions */
         }
 
-        /* Section Contact */
-        .contact-section {
-            padding: 15px;
-        }
 
         /* Footer */
         .footer-container {
@@ -552,7 +545,16 @@
             margin: 10px 0;
             text-align: center;
         }
-
+        .navbar {
+            justify-content: center;
+        }
+        
+        .nav-links {
+            justify-content: center;
+            padding: 0;
+        }
+        
+        
         .social-icons img {
             width: 40px;
             height: 40px;
@@ -561,20 +563,49 @@
 
     /* Responsivité : Très petits écrans */
     @media (max-width: 480px) {
-        h1 {
-            font-size: 1.8em; /* Réduit la taille des titres */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .download-btn {
-            font-size: 0.9em;
-            padding: 8px 15px;
+        body {
+            font-family: Arial, sans-serif;
         }
 
-        .cv-image {
-            width: 100%; /* Adapte complètement à l'écran */
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            
+            padding: 10px 0;
+        }
+        .navbar {
+            justify-content: center;
+        }
+        
+        .nav-links {
+            padding: 0;
+            justify-content: center;
         }
 
-        .footer-bottom p {
-            font-size: 0.7em;
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+
+        .nav-links a:hover {
+            color: #007BFF;
         }
     }
+    
