@@ -16,7 +16,6 @@
     html, body {
         margin: 0;
         padding: 0;
-        overflow-x: hidden; /* Empêche les débordements horizontaux */
     }
 
     * {
@@ -34,6 +33,7 @@
         color: #ffffff;
         padding: 40px 20px;
         font-family: 'Roboto', sans-serif;
+        width: 100%;
     }
 
 
@@ -43,23 +43,25 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        max-width: 1200px;
-        margin: 0 auto;
-        gap: 20px;
+        width: 100%;
+        gap:20px;
+        box-sizing: border-box; /* Assurez-vous que les paddings et marges sont inclus */
     }
+    
 
     .footer-brand,
     .footer-links,
     .footer-contact {
         flex: 1;
-        min-width: 200px;
+        
     }
 
     .footer-links,
     .footer-contact {
-        position: relative; /* Nécessaire pour utiliser left */
-        left: 100px; /* Décalage vers la droite */
+        margin-left: 0; /* Supprimez le décalage */
+        text-align: left; /* Alignez le texte à gauche */
     }
+
 
     /* Brand Section */
     .footer-brand h3 {
@@ -147,25 +149,7 @@
         top:  20px; /* Remonte le bandeau */
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .footer-top {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .footer-brand,
-        .footer-links,
-        .footer-contact {
-            margin-bottom: 20px;
-        }
-
-        .social-icons {
-            justify-content: center;
-        }
-    }
-
-
+    
 
     h1,h2{
         text-align: center;
@@ -314,6 +298,7 @@
         top: 0;
         left: 0;
         width: 100%; 
+        box-sizing: border-box;
         z-index: 1000;
     }
 
@@ -436,7 +421,7 @@
 
 
     #about {
-        padding: 50px 20px;
+        
         background-color: #f9f9f9;
         text-align: center;
     }
@@ -444,24 +429,28 @@
 
 
     .about-container {
-        max-width: 1200px;
-        margin: 0 auto;
         display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
+        flex-wrap: wrap; /* Permet aux colonnes de revenir à la ligne si nécessaire */
+        gap: 20px; /* Ajoute un espacement entre les colonnes */
+        justify-content: center; /* Centre les colonnes lorsqu'elles ne remplissent pas une ligne */
+        width: 100%; /* Assure que le conteneur prend toute la largeur */
+        margin: 0px; /* Centre le conteneur */
+        padding-top: 20px; /* Ajoute un peu de marge interne au conteneur */
+        padding-bottom: 20px;
+        ; /* Garantit que les dimensions prennent en compte le padding */
     }
-
+    
     .about-section {
+        width: 400px; /* Fixe explicitement la largeur des colonnes */
         background: #ffffff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         padding: 20px;
-        flex: 1;
-        max-width: 350px;
-        min-width: 280px;
+        margin: 0px;
         text-align: left;
+        
     }
+    
 
     .about-section h3 {
         color: #082e5c;
@@ -512,8 +501,9 @@
         margin: 5px 0;
     }
 
-    /* Responsivité : Petits écrans (mobiles) */
-    @media (max-width: 768px) {
+
+    /* Responsive Design */
+    @media (max-width: 920px) {
         /* Navbar */
         .navbar {
             padding: 15px;
@@ -528,37 +518,44 @@
             text-align: left;
         }
 
+        
+
+        .about-container{
+            flex-direction: row;
+        }
+
         /* Image du CV */
         .cv-image {
             max-width: 100%;
             height: auto; /* Garde les proportions */
         }
-
-
         /* Footer */
         .footer-container {
             flex-direction: column; /* Empile les sections */
             align-items: center;
         }
-
         .footer-section {
             margin: 10px 0;
             text-align: center;
         }
-        .navbar {
+
+        .footer-top {
+            flex-direction: column;
+            text-align: center;
             justify-content: center;
         }
-        
-        .nav-links {
+        .footer-brand,
+        .footer-links,
+        .footer-contact {
+            margin-bottom: 20px;
             justify-content: center;
-            padding: 0;
+            text-align: center;
         }
-        
-        
-        .social-icons img {
-            width: 40px;
-            height: 40px;
+
+        .social-icons{
+            justify-content: center;
         }
+
     }
 
     /* Responsivité : Très petits écrans */
