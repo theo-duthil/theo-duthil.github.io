@@ -41,7 +41,7 @@
     /* Footer Top Section */
     .footer-top {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
         width: 100%;
         gap:20px;
@@ -53,14 +53,19 @@
     .footer-links,
     .footer-contact {
         flex: 1;
-        
+        justify-content: center;
+        text-align: center;
     }
 
-    .footer-links,
-    .footer-contact {
-        margin-left: 0; /* Supprimez le décalage */
-        text-align: left; /* Alignez le texte à gauche */
+    .footer-brand{
+        text-align: justify;
     }
+
+    .social-icons{
+        justify-content: center;
+    }
+
+    
 
 
     /* Brand Section */
@@ -485,7 +490,7 @@
     }
 
     .photo-credit {
-        font-size: 7px; /* Texte en tout petit */
+        font-size: 6px; /* Texte en tout petit */
         color: #ffffff; /* Gris clair */
         opacity: 0.5; /* À peine visible */
         
