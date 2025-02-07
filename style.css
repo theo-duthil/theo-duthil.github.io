@@ -65,8 +65,6 @@
         justify-content: center;
     }
 
-    
-
 
     /* Brand Section */
     .footer-brand h3 {
@@ -292,7 +290,7 @@
     .navbar {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         background-color: #082e5c; 
         padding: 10px 20px;
@@ -309,7 +307,9 @@
         list-style: none;
         display: flex;
         gap: 30px;
-        padding-left: 35%;
+        
+        justify-content: center;
+        align-items: center;
     }
 
     .nav-links li a {
@@ -503,6 +503,98 @@
     .about-section ul li ul li {
         margin: 5px 0;
     }
+
+    /* ===============================
+   Styles spécifiques pour la page Alternance
+   =============================== */
+/* ===============================
+   Styles Modernes pour la page Alternance
+   =============================== */
+   .alternance-details {
+    background: linear-gradient(135deg, #f4f6f8, #ffffff); /* Fond en dégradé subtil */
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 3rem auto;
+    max-width: 800px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+    line-height: 1.6;
+    border: 1px solid rgba(8, 46, 92, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alternance-details:hover {
+    transform: translateY(-5px); /* Légère remontée au survol */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.alternance-details h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #082e5c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.alternance-details h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    color: #082e5c;
+    border-bottom: 2px solid #082e5c;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.alternance-details h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: #082e5c;
+    text-decoration: underline;
+}
+
+.alternance-details p,
+.alternance-details li {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.alternance-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Remplacement du symbole de liste pour une touche moderne */
+.alternance-details ul li::before {
+    content: '▹';
+    color: #082e5c;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+.alternance-details a {
+    color: #082e5c;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease, color 0.3s ease;
+}
+
+.alternance-details a:hover {
+    border-bottom: 1px solid #007BFF;
+    color: #007BFF;
+}
+
+/* Responsive : adaptation pour les écrans plus petits */
+@media (max-width: 768px) {
+    .alternance-details {
+        padding: 1rem;
+        margin: 1.5rem;
+        font-size: 1em;
+    }
+}
 
 
     /* Responsive Design */
