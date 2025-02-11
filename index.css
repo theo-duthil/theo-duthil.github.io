@@ -1,0 +1,70 @@
+
+#photo_portrait{
+    display: flex;
+    justify-content: center;
+    background  : url("img/portrait50.jpg");
+    height: 600px;
+    position: relative;
+}
+
+#txt_hero {
+    position: absolute;
+    color: #082e5c;
+    font-size: 1.20em;
+    font-weight: bold;
+    padding: 2%;
+    top: 60%;
+    left: 0%;
+    border-radius: 10px;
+}
+#hero_buttons{
+    position: absolute;
+    top : 80%;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+}
+.hero_button a{
+    display: inline-block;
+    padding: 15px 20px;
+    margin-right: 25px;
+    background-color: #082e5c; 
+    color: #FFFFFF; 
+    text-decoration: none;
+    border: 2px solid #082e5c;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;   
+}
+
+.hero_button a:hover {
+    transform: scale(1.05); /* Agrandit légèrement */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+    color :#082e5c;
+    background-color: #FFFFFF;  
+}
+
+#button_contact a {
+    background-color: transparent; /* Fond transparent */
+    border: 2px solid #082e5c; /* Bordure colorée */
+    color: #082e5c; /* Texte bleu foncé pour plus de contraste */
+}
+
+#button_contact a:hover{
+    transform: scale(1.05); /* Agrandit légèrement */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+    color :#082e5c;
+    background-color: #FFFFFF;
+}
+
+.hero li a{
+    text-decoration: none;
+    color: white; 
+    font-size: 1.1em;
+}
+
+#photo_accueil{
+    background-size: cover;
+}
+ 

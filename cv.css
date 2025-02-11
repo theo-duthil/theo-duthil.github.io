@@ -1,0 +1,35 @@
+#cv {
+    max-width: 800px; /* Limite la largeur maximale du conteneur */
+    margin: 0 auto; /* Centre le conteneur sur la page */
+    padding: 5.5%; /* Ajoute un peu de padding pour la mise en page */
+}
+
+.cv-image {
+    width: 100%; /* L'image prend toute la largeur disponible dans son conteneur */
+    max-width: 800px; /* Limite la largeur maximale de l'image */
+    display: block; /* Empêche l'image d'avoir un comportement en ligne */
+    margin: 0 auto; /* Centre l'image horizontalement */
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #082e5c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: scale(1.05); /* Agrandit légèrement */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre */
+}
+
+@media (max-width: 480px) {
+    #cv{
+        padding-top: 15%;
+    }
+}
