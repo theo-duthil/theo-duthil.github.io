@@ -9,6 +9,12 @@
     max-width: 800px; /* Limite la largeur maximale de l'image */
     display: block; /* Empêche l'image d'avoir un comportement en ligne */
     margin: 0 auto; /* Centre l'image horizontalement */
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cv-image:hover {
+    transform: translateY(-2px); /* Légère remontée au survol */
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.15);
 }
 
 .download-btn {

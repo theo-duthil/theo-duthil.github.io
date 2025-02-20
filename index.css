@@ -1,7 +1,7 @@
 
 #photo_portrait{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     background  : url("img/portrait50.jpg");
     height: 600px;
     position: relative;
@@ -67,4 +67,14 @@
 #photo_accueil{
     background-size: cover;
 }
- 
+@media (max-width: 960px) {
+    #photo_portrait{
+        background  : url("img/portrait40.jpg");   
+    }
+}
+
+@media (max-width: 800px) {
+    #photo_portrait{
+        background  : url("img/portrait-800px.jpg");   
+    }
+}
