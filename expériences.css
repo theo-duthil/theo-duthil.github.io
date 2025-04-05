@@ -1,0 +1,120 @@
+
+
+#about {
+    padding-top: 3%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux colonnes de revenir à la ligne si nécessaire */
+    gap: 20px; /* Ajoute un espacement entre les colonnes */
+    justify-content: center; /* Centre les colonnes lorsqu'elles ne remplissent pas une ligne */
+    width: 100%; /* Assure que le conteneur prend toute la largeur */
+    margin: 0px; /* Centre le conteneur */
+    padding-top: 20px; /* Ajoute un peu de marge interne au conteneur */
+    padding-bottom: 20px;
+    ; /* Garantit que les dimensions prennent en compte le padding */
+}
+
+
+.about-section, .sitincloud-section{
+    width: 400px; /* Fixe explicitement la largeur des colonnes */
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0px;
+    text-align: left;   
+}
+
+
+
+.about-section h3, .sitincloud-section h3 {
+    color: #082e5c;
+    margin-bottom: 15px;
+}
+
+.about-section p, .sitincloud-section p{
+    color: #333;
+    font-size: 1em;
+    line-height: 1.6em;
+}
+
+.about-section ul, .sitincloud-section p {
+    list-style: none;
+    padding: 0;
+    color: #555;
+}
+
+.about-section ul li, .sitincloud-section p{
+    margin-bottom: 10px;
+}
+
+.about-section ul li strong, .sitincloud-section ul li strong{
+    color: #082e5c;
+}
+
+.sitincloud-section{
+    width: 100%;
+}
+
+.sitincloud-section h3{
+    text-align: center;
+}
+
+.logo-sitincloud-img{
+    position: absolute;
+    width: 12%;
+}
+
+.about-image {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.graph-image{
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 15px 20px 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.graph-image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.date{
+    position: absolute;
+    left: 90%;
+    font-weight: bold;
+}
+
+.photo-credit {
+    font-size: 6px; /* Texte en tout petit */
+    color: #ffffff; /* Gris clair */
+    opacity: 0.5; /* À peine visible */
+}
+
+.about-section ul li ul {
+    margin-left: 20px;
+    list-style-type: circle;
+}
+.about-section ul li ul li {
+    margin: 5px 0;
+}
+
+@media (max-width: 480px) {
+    #about{
+        padding-top: 15%;
+    }
+}
