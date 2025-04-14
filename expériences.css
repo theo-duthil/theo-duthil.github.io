@@ -58,6 +58,11 @@
     color: #082e5c;
 }
 
+.about-section:hover, .sitincloud-section:hover{
+    transform: translateY(-2px); /* Légère remontée au survol */
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.15);
+}
+
 .sitincloud-section{
     width: 100%;
 }
